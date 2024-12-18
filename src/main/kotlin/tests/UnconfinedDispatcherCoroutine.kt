@@ -33,6 +33,9 @@ class UnconfinedDispatcherCoroutine() {
         val ioScope = CoroutineScope(Dispatchers.IO)
 
 
+        /**
+         * Если scope сделан cancel - то в нём больше нельзя запустить корутины
+         */
         val scopes = listOf(defaultScope, ioScope, unconfinedScope)
         scopes.forEach { scope ->
             scope.launch {

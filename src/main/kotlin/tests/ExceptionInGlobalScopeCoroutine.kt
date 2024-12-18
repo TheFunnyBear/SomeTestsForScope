@@ -10,17 +10,25 @@ class ExceptionInGlobalScopeCoroutine() {
     fun start() {
         println("My GlobalScope coroutine runs...:  ${Thread.currentThread().name}")
 
-        GlobalScope.launch {
-            simpleCoroutine()
+        repeat(2) {
+            GlobalScope.launch {
+                simpleCoroutine()
+            }
+
+            /**
+             * Исключение в корутине запущенной в GlobalScope не приводит к
+             * падению приложения, падает только корутина.
+             */
+
+            Thread.sleep(10.seconds.inWholeMilliseconds)
+
+            /**
+             * Повторяем несколько раз, чтобы убедиться что приложение
+             * живое.
+             */
         }
 
-        /**
-         * Исключение в корутине запущенной в GlobalScope не приводит к
-         * падению приложения, падает только корутина.
-         */
 
-        Thread.sleep(10.seconds.inWholeMilliseconds)
-        println("My program run ends...: ${Thread.currentThread().name}")
     }
 
     private suspend fun simpleCoroutine(){

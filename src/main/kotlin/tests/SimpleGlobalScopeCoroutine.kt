@@ -24,7 +24,7 @@ class SimpleGlobalScopeCoroutine() {
          * результата работы корутины.
          */
 
-        Thread.sleep(10.seconds.inWholeMilliseconds)
+        Thread.sleep(2.seconds.inWholeMilliseconds)
         println("My program run ends...: ${Thread.currentThread().name}")
     }
 
