@@ -1,7 +1,4 @@
-package org.example
-
-import kotlinx.coroutines.*
-import kotlin.time.Duration.Companion.seconds
+package org.example.tests
 
 class SimpleTest() {
 

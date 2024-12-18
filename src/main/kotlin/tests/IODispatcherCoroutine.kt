@@ -1,6 +1,7 @@
-package org.example
+package org.example.tests
 
 import kotlinx.coroutines.*
+import org.example.Payload
 import kotlin.time.Duration.Companion.seconds
 
 class IODispatcherCoroutine() {

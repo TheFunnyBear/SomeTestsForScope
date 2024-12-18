@@ -1,9 +1,11 @@
 package org.example
 
+import org.example.tests.*
+
 fun main() {
     println("Hello World!")
 
-    val test = TestsTypes.DEAD_LOCK_IN_COROUTINE
+    val test = TestsTypes.RUN_MANY_SCOPES
 
     when (test) {
         TestsTypes.SIMPLE_THREAD -> {
@@ -54,6 +56,12 @@ fun main() {
             val deadLockInCoroutines = DeadLockInCoroutines()
             deadLockInCoroutines.start()
         }
+
+        TestsTypes.RUN_MANY_SCOPES -> {
+            val runManyScopesTest = RunManyScopesTest()
+            runManyScopesTest.start()
+        }
+
     }
 
 }
@@ -69,5 +77,6 @@ enum class TestsTypes {
     DISPATCHERS_COROUTINE,
     UNCONFINED_DISPATCHER_COROUTINE,
     DEAD_LOCK_IN_COROUTINE,
+    RUN_MANY_SCOPES,
 }
 

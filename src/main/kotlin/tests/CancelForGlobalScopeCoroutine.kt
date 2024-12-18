@@ -1,4 +1,4 @@
-package org.example
+package org.example.tests
 
 import kotlinx.coroutines.*
 import kotlin.time.Duration.Companion.seconds

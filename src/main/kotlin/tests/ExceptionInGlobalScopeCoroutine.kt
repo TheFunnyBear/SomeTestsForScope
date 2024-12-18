@@ -1,7 +1,6 @@
-package org.example
+package org.example.tests
 
 import kotlinx.coroutines.*
-import java.util.concurrent.ThreadLocalRandom
 import kotlin.random.Random
 import kotlin.time.Duration.Companion.seconds
 

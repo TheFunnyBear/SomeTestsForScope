@@ -1,7 +1,6 @@
-package org.example
+package org.example.tests
 
 import kotlin.concurrent.thread
-import kotlin.random.Random
 
 class SimpleThreadStart() {
 

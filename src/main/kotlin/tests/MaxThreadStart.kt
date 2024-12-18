@@ -1,5 +1,6 @@
-package org.example
+package org.example.tests
 
+import org.example.Payload
 import kotlin.concurrent.thread
 
 /**

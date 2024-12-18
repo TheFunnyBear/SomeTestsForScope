@@ -1,8 +1,6 @@
-package org.example
+package org.example.tests
 
 import kotlinx.coroutines.*
-import kotlin.concurrent.thread
-import kotlin.random.Random
 import kotlin.time.Duration.Companion.seconds
 
 class UnconfinedDispatcherCoroutine() {
