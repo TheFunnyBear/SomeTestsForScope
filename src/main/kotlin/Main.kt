@@ -5,7 +5,7 @@ import org.example.tests.*
 fun main() {
     println("Hello World!")
 
-    val test = TestsTypes.RUN_MANY_SCOPES
+    val test = TestsTypes.ENSURE_ACTIVE_TEST
 
     when (test) {
         TestsTypes.SIMPLE_THREAD -> {
@@ -62,6 +62,11 @@ fun main() {
             runManyScopesTest.start()
         }
 
+        TestsTypes.ENSURE_ACTIVE_TEST -> {
+            val ensureActiveTest = EnsureActiveTest()
+            ensureActiveTest.start()
+        }
+
     }
 
 }
@@ -78,5 +83,6 @@ enum class TestsTypes {
     UNCONFINED_DISPATCHER_COROUTINE,
     DEAD_LOCK_IN_COROUTINE,
     RUN_MANY_SCOPES,
+    ENSURE_ACTIVE_TEST
 }
 
